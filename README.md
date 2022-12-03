@@ -187,4 +187,300 @@ This is the project about electricity bills , customer services , locations of d
   </body>
 </html>
 
+<!-- css -->
+
+
+body {
+  background: linear-gradient(
+       105deg,
+       #40f9e9 ,
+       #0258a3
+   );
+}
+.layout {
+  width: 600px;
+  margin: auto;
+}
+.accordion {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: linear-gradient(
+       105deg,
+       #fbfb03,
+       #dedbb3 
+       
+   );
+  border-radius: 10px;
+}
+.accordion__question p {
+  margin: 5px;
+  padding: 0;
+  font-family: Verdana;
+  font-size: 20px;
+}
+.accordion__answer p {
+  margin: 5px;
+  padding: 10px;
+  font-size: large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(
+    105deg,
+    #440404 ,
+    #55c88e 
+    
+);
+  border-radius: 10px;
+}
+.accordion:hover {
+  cursor: pointer;
+}
+.accordion__answer {
+  display: none;
+}
+.accordion.active .accordion__answer {
+  display: block;
+}
+
+
+.firstheading {
+  font-weight: solid;
+  color: rgb(227, 39, 39);
+  text-align: center;
+  border: 2px solid black;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 1%;
+}
+.one {
+  border: 2px solid black;
+  margin-top: 1%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+.home1 {
+  background: linear-gradient(
+    105deg,
+    #fd0606,
+    #88beee 
+    
+);
+  color:white;
+}
+.contact1 {
+  background: linear-gradient(
+    105deg,
+    #fd0606 ,
+    #88beee
+    
+);
+  color:white;
+}
+.container {
+  display: flex;
+}
+.leftContainer {
+  width: 30%;
+  margin-left: 1%;
+}
+.rightContainer {
+  width: 30%;
+  margin-right: 1%;
+ 
+  
+}
+.Loginform {
+  border: 2px solid black;
+  margin-top: 1%;
+}
+.log {
+  margin-top: 1%;
+  margin-left: 1%;
+}
+.log1 {
+  margin-left: 8%;
+  margin-top: 1%;
+}
+.pass {
+  margin-top: 5%;
+  margin-left: 1%;
+}
+.button1 {
+  margin-top: 15px;
+  margin-bottom: 2px;
+  margin-left: 5%;
+}
+.button2 {
+  margin-top: 15px;
+  margin-bottom: 2px;
+  margin-left: 50%;
+}
+.layout {
+  border: 3px solid;
+  margin-left: 1%;
+  margin-top: 1%;
+  width: 100%;
+}
+.layout1 {
+  border: 2px solid black;
+  margin-top: 1%;
+}
+.faq {
+  text-align: center;
+  color: rgb(227, 39, 39);
+}
+.faq:hover{
+  color: yellow;
+}
+
+.content {
+  border: 2px solid black;
+  width: 34%;
+  margin-top: 1%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.how {
+  text-align: center;
+  color: red;
+}
+.how:hover{
+  color: yellow;
+}
+.links {
+  border: 2px solid black;
+  margin-top: 1%;
+}
+.list1:hover{
+  color: chartreuse;
+}
+.list2:hover{
+  color:chartreuse;
+}
+.list3:hover{
+  color: chartreuse;
+}
+.list4:hover{
+  color: chartreuse;
+}
+.links:active{
+  color: yellow;
+}
+.quick {
+  text-align: center;
+  color: rgb(227, 39, 39);
+}
+.quick:hover{
+  color: yellow;
+}
+.state {
+  border: 2px solid black;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.high {
+  text-align: center;
+  color: rgb(227, 39, 39);
+}
+.high:hover{
+  color: yellow;
+}
+.last {
+  color: yellow;
+  border: 2px solid;
+  margin-left: 75%;
+  margin-bottom: 1%;
+  margin-right: 1%;
+}
+.last1 {
+  text-align: center;
+}
+
+<!-- JS -->
+let answers = document.querySelectorAll(".accordion");
+console.log("answers", answers[0]);
+answers.forEach((event) => {
+  event.addEventListener("click", () => {
+    if (event.classList.contains("active")) {
+      event.classList.remove("active");
+    } else {
+      event.classList.add("active");
+    }
+  });
+});
+
+<!-- contact -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+    <div class="container">
+        <form action="action_page.php">
+      
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      
+          <label for="state">State</label>
+          <select id="state" name="state">
+            <option value="null">Select State</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+            <option value="Daman and Diu">Daman and Diu</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Lakshadweep">Lakshadweep</option>
+            <option value="Puducherry">Puducherry</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Manipur">Manipur</option>
+            <option value="Meghalaya">Meghalaya</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tripura">Tripura</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="West Bengal">West Bengal</option>
+          </select>
+      
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      
+          <input type="submit" value="Submit">
+      
+        </form>
+      </div>
+</body>
+</html>
+
+
+
 
